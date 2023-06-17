@@ -10,5 +10,6 @@ class Fogueira:
      self.caneta.penup()
      self.caneta.shape("arrow")
      self.caneta.color("red")
+     print(self.posicao) 
     
         

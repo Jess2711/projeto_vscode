@@ -6,7 +6,8 @@ list_bichinhos = []
 fogueira = Fogueira([0,0], 90)
 
 
-for elemento in range(0,5):
+
+for elemento in range(0,cont_bichinhos):
   novo_bichinho = Bichinhos("lentao", [20,20*elemento], "red")
   list_bichinhos.append(novo_bichinho)
   
@@ -21,3 +22,5 @@ def rodar_simulacao():
   
 for elemento in range(0,10):
   rodar_simulacao()
+
+bichinho.calc_temp(fogueira.posicao)
