@@ -4,7 +4,7 @@ from random import randint
 
 TEMP_MAX = 140 #variaveis estaticas
 TEMP_MIN = 80
-STEP = 5
+STEP = 50
 
 class Bichinhos:
   def __init__(self, nome, cor) -> None:
@@ -16,6 +16,7 @@ class Bichinhos:
         self.caneta.goto(self.posicao)
         self.gene = __class__.gera_gene()
         
+        
 
 
   def criar_caneta(self):
@@ -23,6 +24,7 @@ class Bichinhos:
      self.caneta.penup() 
      self.caneta.shape("turtle")
      self.caneta.color(self.cor)
+     self.caneta.speed(10)
 
 
   def limpar_visual(self):
@@ -51,7 +53,8 @@ class Bichinhos:
       if self.posicao[1] < pos_fogueira[1]:
         self.posicao[1] += STEP
       else: 
-        self.posicao[1] -= STEP  
+        self.posicao[1] -= STEP 
+   
 
   def dist_to_fogo(self, pos_fogueira):
     aleatorio=(randint(0,1))
@@ -88,6 +91,14 @@ class Bichinhos:
      novo_bichinho = Bichinhos("lentinho", "blue") 
      gene_novo_bichinho = (self.gene + partner.gene)/2
      novo_bichinho.gene = gene_novo_bichinho
+     aleatorio = (randint(0,100))
+     if aleatorio < 50:
+        nova_posicao = self.posicao
+     else:
+        nova_posicao = partner.posicao   
+     novo_bichinho.posicao = nova_posicao
+     self.caneta.goto(nova_posicao)
+     print(nova_posicao)
      return novo_bichinho
   
 
