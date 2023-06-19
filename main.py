@@ -53,7 +53,7 @@ def rodar_simulacao(rodada):
     for bichinho in list_bichinhos:
         bichinho.mover(fogueira.posicao)
         bichinho.calc_temp(fogueira.posicao, fogueira.intensidade)
-    if rodada%100 == 0:
+    if rodada%10 == 0:
       visual()
       fogueira.criar_caneta()
       fogueira.desenhar()
@@ -72,7 +72,7 @@ def rodar_simulacao(rodada):
 #print(a)
 
       
-cont_bichinhos = 100
+cont_bichinhos = 50
 list_bichinhos = []
 fogueira = Fogueira([200,150],50)
 

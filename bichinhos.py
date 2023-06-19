@@ -24,7 +24,7 @@ class Bichinhos:
      self.caneta.penup() 
      self.caneta.shape("turtle")
      self.caneta.color(self.cor)
-     self.caneta.speed(10)
+     
 
 
   def limpar_visual(self):
@@ -97,8 +97,7 @@ class Bichinhos:
      else:
         nova_posicao = partner.posicao   
      novo_bichinho.posicao = nova_posicao
-     self.caneta.goto(nova_posicao)
-     print(nova_posicao)
+     #self.caneta.goto(nova_posicao)
      return novo_bichinho
   
 
